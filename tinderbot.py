@@ -78,8 +78,8 @@ class TinderBot():
         email_field = self.driver.find_element(By.NAME, 'email')
         pw_field = self.driver.find_element(By.NAME, 'pass')
         login_button = self.driver.find_element(By.NAME, 'login')
-        email_field.send_keys(email)
-        pw_field.send_keys(password)
+        email_field.send_keys(email) #
+        pw_field.send_keys(password) #
         login_button.click()
         self.driver.switch_to.window(base_window)
         try:
@@ -137,7 +137,7 @@ class TinderBot():
         text_area = self.driver.find_element('xpath', '/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div/div[1]/div/div/div[3]/form/textarea')
         print("sending message")
         message = generate_intro(generate_tinder_message(), name)
-        text_area.send_keys(message)
+        # text_area.send_keys(message)
         sleep(10)
         # text_area.send_keys(Keys.ENTER)
 
